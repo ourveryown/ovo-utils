@@ -1,8 +1,16 @@
-[![Build Status](https://travis-ci.org/jmargenberg/monok.svg?branch=master)](https://travis-ci.org/jmargenberg/monok) [![Coverage Status](https://coveralls.io/repos/github/ourveryown/ovo-utils/badge.svg?branch=master)](https://coveralls.io/github/ourveryown/ovo-utils?branch=master)
+[![Hex.pm](https://img.shields.io/hexpm/v/ovo_utils.svg)](https://hex.pm/packages/ovo_utils) [![Build Status](https://travis-ci.org/jmargenberg/monok.svg?branch=master)](https://travis-ci.org/jmargenberg/monok) [![Coverage Status](https://coveralls.io/repos/github/ourveryown/ovo-utils/badge.svg?branch=master)](https://coveralls.io/github/ourveryown/ovo-utils?branch=master)
 
 # OVO Utils
 
 Common utilities used in Our Very Own Elixir projects.
+
+# Installation
+
+Add `{:ovo_utils, "~> 0.1.0"}` to your `deps` in mix.exs and run `mix deps.get`
+
+# Documentation
+
+Full documentation can be found at [HexDocs](https://hexdocs.pm/ovo_utils/api-reference.html).
 
 # Utility Functions
 
