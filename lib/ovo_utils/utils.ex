@@ -20,6 +20,8 @@ defmodule OvoUtils.Utils do
       iex> {:ok, 2} |> Utils.apply_on_ok(fn _ -> {:error, "reason"} end)
       {:error, "reason"}
   """
+  def apply_on_ok(tuple, function)
+
   def apply_on_ok({:ok, data}, function) do
     case function.(data) do
       {atom, result} when is_atom(atom) -> {atom, result}

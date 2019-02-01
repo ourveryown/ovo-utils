@@ -42,8 +42,8 @@ defmodule OvoUtils.MapUtils do
       iex> %{"a" => "foo", "b" => "bar"} |> MapUtils.atomise_string_keys()
       %{a: "foo", b: "bar"}
   """
-  def atomise_string_keys(element) do
-    transform_keys(element, &String.to_existing_atom/1)
+  def atomise_string_keys(map) do
+    transform_keys(map, &String.to_existing_atom/1)
   end
 
   @doc """
@@ -56,8 +56,8 @@ defmodule OvoUtils.MapUtils do
       iex> %{a: "foo", b: "bar"} |> MapUtils.stringify_atom_keys()
       %{"a" => "foo", "b" => "bar"}
   """
-  def stringify_atom_keys(element) do
-    transform_keys(element, &Atom.to_string/1)
+  def stringify_atom_keys(map) do
+    transform_keys(map, &Atom.to_string/1)
   end
 
   @doc """
@@ -70,8 +70,8 @@ defmodule OvoUtils.MapUtils do
       iex> %{"foo_bar" => "a", "bar_foo" => "b"} |> MapUtils.camelize_string_keys()
       %{"fooBar" => "a", "barFoo" => "b"}
   """
-  def camelize_string_keys(element) do
-    transform_keys(element, &Recase.to_camel/1)
+  def camelize_string_keys(map) do
+    transform_keys(map, &Recase.to_camel/1)
   end
 
   @doc """
@@ -84,7 +84,7 @@ defmodule OvoUtils.MapUtils do
       iex> %{"fooBar" => "a", "barFoo" => "b"} |> MapUtils.snakify_string_keys()
       %{"foo_bar" => "a", "bar_foo" => "b"}
   """
-  def snakify_string_keys(element) do
-    transform_keys(element, &Recase.to_snake/1)
+  def snakify_string_keys(map) do
+    transform_keys(map, &Recase.to_snake/1)
   end
 end
