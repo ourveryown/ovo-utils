@@ -4,8 +4,8 @@ defmodule OvoUtils.MixProject do
   def project do
     [
       app: :ovo_utils,
-      version: "0.1.0",
-      elixir: "~> 1.8",
+      version: "0.2.0",
+      elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
@@ -27,7 +27,7 @@ defmodule OvoUtils.MixProject do
       {:credo, "~> 1.0.0", only: [:dev, :test]},
       {:excoveralls, "~> 0.10", only: :test},
       {:ex_doc, "~> 0.19", only: :dev},
-      {:recase, "~> 0.4.0"}
+      {:recase, "~> 0.6.0"}
     ]
   end
 
